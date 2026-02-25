@@ -12,6 +12,13 @@ Changelog
 .. module:: joserfc
     :noindex:
 
+1.6.3
+-----
+
+**Released on February 25, 2026**
+
+- **JWE**: Set a max value for ``p2c`` header.
+
 1.6.2
 -----
 
