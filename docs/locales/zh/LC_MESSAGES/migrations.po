@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  joserfc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-09 14:11+0900\n"
+"POT-Creation-Date: 2026-03-01 20:41+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../migrations/authlib.rst:2
 msgid "Migrating from Authlib"
@@ -65,8 +65,8 @@ msgstr "Authlib"
 #: ../../migrations/pyjwt.rst:64 ../../migrations/pyjwt.rst:96
 #: ../../migrations/pyjwt.rst:136 ../../migrations/pyjwt.rst:155
 #: ../../migrations/python-jose.rst:31 ../../migrations/python-jose.rst:72
-#: ../../migrations/python-jose.rst:101 ../../migrations/python-jose.rst:122
-#: ../../migrations/python-jose.rst:137 ../../migrations/python-jose.rst:155
+#: ../../migrations/python-jose.rst:101 ../../migrations/python-jose.rst:128
+#: ../../migrations/python-jose.rst:143 ../../migrations/python-jose.rst:161
 msgid "joserfc"
 msgstr "joserfc"
 
@@ -100,7 +100,7 @@ msgid ""
 ":ref:`jwt` guide."
 msgstr ""
 
-#: ../../migrations/authlib.rst:75 ../../migrations/python-jose.rst:149
+#: ../../migrations/authlib.rst:75 ../../migrations/python-jose.rst:155
 msgid "JWK"
 msgstr ""
 
@@ -339,7 +339,7 @@ msgid ""
 "and decode a JWT, but the parameter structure differs."
 msgstr ""
 
-#: ../../migrations/pyjwt.rst:57 ../../migrations/python-jose.rst:115
+#: ../../migrations/pyjwt.rst:57 ../../migrations/python-jose.rst:121
 msgid "``get_unverified_header``"
 msgstr "``get_unverified_header``"
 
@@ -349,7 +349,7 @@ msgid ""
 "allows extracting the header from a JWT without verifying its signature."
 msgstr ""
 
-#: ../../migrations/pyjwt.rst:62 ../../migrations/python-jose.rst:120
+#: ../../migrations/pyjwt.rst:62 ../../migrations/python-jose.rst:126
 msgid "In ``joserfc``, we can get the unverified header with:"
 msgstr ""
 
@@ -495,24 +495,31 @@ msgid ""
 "in terms of structure and flexibility."
 msgstr ""
 
-#: ../../migrations/python-jose.rst:117
+#: ../../migrations/python-jose.rst:116
+msgid ""
+"``python-jose`` will automatically convert and validate string values for"
+" JWT claims (e.g. `exp`, `iat` and `nbf`) whereas ``joserfc`` will raise "
+"an exception when using the `JWTClaimsRegistry`."
+msgstr ""
+
+#: ../../migrations/python-jose.rst:123
 msgid ""
 "The ``jwt`` module in python-jose provides a method called "
 "``get_unverified_header``, which allows extracting the header from a JWT "
 "without verifying its signature."
 msgstr ""
 
-#: ../../migrations/python-jose.rst:133
+#: ../../migrations/python-jose.rst:139
 msgid "``get_unverified_claims``"
 msgstr "``get_unverified_claims``"
 
-#: ../../migrations/python-jose.rst:135
+#: ../../migrations/python-jose.rst:141
 msgid ""
 "You can also use the ``jws.extract_compact`` method to extract the JWT's "
 "claims:"
 msgstr ""
 
-#: ../../migrations/python-jose.rst:151
+#: ../../migrations/python-jose.rst:157
 msgid ""
 "In ``python-jose``, you can use ``jwk.construct`` to create a key "
 "instance from a JWK-formatted dictionary. In contrast, ``joserfc`` "

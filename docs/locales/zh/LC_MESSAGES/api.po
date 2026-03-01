@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  joserfc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-09 14:11+0900\n"
+"POT-Creation-Date: 2026-03-01 20:41+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../api/errors.rst:2
 msgid "Errors"
@@ -33,12 +33,11 @@ msgid ""
 "match."
 msgstr "该错误是为 JWS 设计的，当签名不匹配时触发。"
 
-#: ../../docstring joserfc.errors.BadSignatureError.error:1
+#: joserfc.errors.BadSignatureError.error:1
 #: joserfc.errors.ConflictAlgorithmError.error:1
 #: joserfc.errors.DecodeError.error:1 joserfc.errors.ExceededSizeError.error:1
 #: joserfc.errors.ExpiredTokenError.error:1
 #: joserfc.errors.InsecureClaimError.error:1
-#: joserfc.errors.InvalidCEKLengthError.error:1
 #: joserfc.errors.InvalidClaimError.error:1
 #: joserfc.errors.InvalidEncryptedKeyError.error:1
 #: joserfc.errors.InvalidEncryptionAlgorithmError.error:1
@@ -48,8 +47,7 @@ msgstr "该错误是为 JWS 设计的，当签名不匹配时触发。"
 #: joserfc.errors.InvalidKeyIdError.error:1
 #: joserfc.errors.InvalidKeyLengthError.error:1
 #: joserfc.errors.InvalidKeyTypeError.error:1
-#: joserfc.errors.InvalidPayloadError.error:1
-#: joserfc.errors.InvalidTokenError.error:1 joserfc.errors.JoseError.error:1
+#: joserfc.errors.InvalidPayloadError.error:1 joserfc.errors.JoseError.error:1
 #: joserfc.errors.KeyParameterError.error:1
 #: joserfc.errors.MissingAlgorithmError.error:1
 #: joserfc.errors.MissingClaimError.error:1
@@ -70,14 +68,12 @@ msgstr "短字符串错误代码"
 msgid "This a base error for JWT claims validation."
 msgstr ""
 
-#: ../../docstring joserfc.errors.ClaimError.description:1
+#: joserfc.errors.ClaimError.description:1
 #: joserfc.errors.ExpiredTokenError.description:1
 #: joserfc.errors.InsecureClaimError.description:1
-#: joserfc.errors.InvalidCEKLengthError.description:1
 #: joserfc.errors.InvalidClaimError.description:1
 #: joserfc.errors.InvalidEncryptedKeyError.description:1
 #: joserfc.errors.InvalidExchangeKeyError.description:1
-#: joserfc.errors.InvalidTokenError.description:1
 #: joserfc.errors.JoseError.description:1
 #: joserfc.errors.MissingAlgorithmError.description:1
 #: joserfc.errors.MissingClaimError.description:1
@@ -152,10 +148,6 @@ msgid ""
 "This error is designed for JWT. It raised when the payload is not a valid"
 " JSON object."
 msgstr "此错误用于 JWT。当载荷（payload）不是有效的 JSON 对象时触发。"
-
-#: joserfc.errors.InvalidTokenError:1 of
-msgid "This error is designed for JWT. It raised when the token is not valid yet."
-msgstr "此错误是为 JWT 设计的，当 Token 不是有效的 JSON 对象时触发。"
 
 #: joserfc.errors.JoseError:1 of
 msgid "Base Exception for all errors in joserfc."
@@ -279,11 +271,11 @@ msgstr "字典格式的额外 header"
 msgid "Returns the protected header values in dict."
 msgstr "返回受保护 header 的值，字典格式"
 
-#: ../../docstring joserfc.jwe.CompactEncryption.plaintext:1 of
+#: joserfc.jwe.CompactEncryption.plaintext:1 of
 msgid "the plaintext in bytes"
 msgstr "字节形式的明文"
 
-#: ../../docstring joserfc.jwe.CompactEncryption.protected:1 of
+#: joserfc.jwe.CompactEncryption.protected:1 of
 msgid "protected header in dict"
 msgstr "字典格式的受保护 header"
 
@@ -310,7 +302,7 @@ msgstr "向 JWE JSON 序列化添加一个接收者。请添加符合 \"alg\" �
 msgid "recipient's own (unprotected) header"
 msgstr "接收者自己的（未保护的）header"
 
-#: ../../docstring joserfc.jwe.FlattenedJSONEncryption.flattened:1
+#: joserfc.jwe.FlattenedJSONEncryption.flattened:1
 #: joserfc.jwe.GeneralJSONEncryption.flattened:1 of
 msgid "represents if the object is in flatten syntax"
 msgstr "表示对象是否为扁平语法"
@@ -380,24 +372,23 @@ msgstr "获取给定名称的允许 (\"zip\") 算法实例。"
 msgid "value of the ``zip``, e.g. ``DEF``"
 msgstr "``zip`` 的值，例如 ``DEF``"
 
-#: ../../docstring joserfc.jwe.JWERegistry.max_auth_tag_length:1 of
+#: joserfc.jwe.JWERegistry.max_auth_tag_length:1 of
 msgid "max auth tag's size in bytes"
 msgstr ""
 
-#: ../../docstring joserfc.jwe.JWERegistry.max_ciphertext_length:1 of
+#: joserfc.jwe.JWERegistry.max_ciphertext_length:1 of
 msgid "max ciphertext's size in bytes"
 msgstr ""
 
-#: ../../docstring joserfc.jwe.JWERegistry.max_encrypted_key_length:1 of
+#: joserfc.jwe.JWERegistry.max_encrypted_key_length:1 of
 msgid "max encrypted key's size in bytes"
 msgstr ""
 
-#: ../../docstring joserfc.jwe.JWERegistry.max_initialization_vector_length:1
-#: of
+#: joserfc.jwe.JWERegistry.max_initialization_vector_length:1 of
 msgid "max initialization vector's size in bytes"
 msgstr ""
 
-#: ../../docstring joserfc.jwe.JWERegistry.max_protected_header_length:1 of
+#: joserfc.jwe.JWERegistry.max_protected_header_length:1 of
 msgid "max protected header content's size in bytes"
 msgstr "受保护的 header 内容的最大字节大小"
 
@@ -596,6 +587,60 @@ msgstr "此密钥用于，例如 \"sig\"、\"enc\""
 msgid "if this key is not designed for the given use"
 msgstr "如果此密钥不支持给定的 \"use\""
 
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:1 of
+msgid ""
+"Generate an elliptic curve cryptographic key derived from a secret input "
+"using a key derivation function (KDF). This allows the creation of "
+"deterministic elliptic curve keys based on given input data, curve "
+"specification, and KDF options."
+msgstr ""
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:5
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:45 of
+msgid "The input secret used for key derivation"
+msgstr ""
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:6
+#: joserfc._rfc7518.ec_key.ECKey.generate_key:3 of
+msgid "ECKey curve name"
+msgstr "ECKey 曲线名称"
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:7
+#: joserfc._rfc7518.ec_key.ECKey.generate_key:4
+#: joserfc._rfc7518.oct_key.OctKey.generate_key:4
+#: joserfc._rfc7518.rsa_key.RSAKey.generate_key:4
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:47
+#: joserfc._rfc8037.okp_key.OKPKey.generate_key:4 of
+msgid "extra parameter in JWK"
+msgstr "JWK 中的额外参数"
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:8
+#: joserfc._rfc7518.ec_key.ECKey.generate_key:5
+#: joserfc._rfc7518.rsa_key.RSAKey.generate_key:5
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:48
+#: joserfc._rfc8037.okp_key.OKPKey.generate_key:5 of
+msgid "generate a private key or public key"
+msgstr "生成私钥或公钥"
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:9
+#: joserfc._rfc7518.ec_key.ECKey.generate_key:6
+#: joserfc._rfc7518.oct_key.OctKey.generate_key:6
+#: joserfc._rfc7518.rsa_key.RSAKey.generate_key:6
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:49
+#: joserfc._rfc8037.okp_key.OKPKey.generate_key:6 of
+msgid "add ``kid`` automatically"
+msgstr "自动添加 ``kid``"
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:10
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:50 of
+msgid "Key derivation function name"
+msgstr ""
+
+#: joserfc._rfc7518.ec_key.ECKey.derive_key:11
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:51 of
+msgid "Additional options for the KDF"
+msgstr ""
+
 #: joserfc.jwk.ECKey.dict_value:1 joserfc.jwk.OKPKey.dict_value:1
 #: joserfc.jwk.OctKey.dict_value:1 joserfc.jwk.RSAKey.dict_value:1 of
 msgid "Property of the Key in Dict (JSON)."
@@ -614,30 +659,6 @@ msgstr ""
 msgid "Generate a ``ECKey`` with the given \"crv\" value."
 msgstr "生成具有给定 \"crv\" 值的 ``ECKey``。"
 
-#: joserfc._rfc7518.ec_key.ECKey.generate_key:3 of
-msgid "ECKey curve name"
-msgstr "ECKey 曲线名称"
-
-#: joserfc._rfc7518.ec_key.ECKey.generate_key:4
-#: joserfc._rfc7518.oct_key.OctKey.generate_key:4
-#: joserfc._rfc7518.rsa_key.RSAKey.generate_key:4
-#: joserfc._rfc8037.okp_key.OKPKey.generate_key:4 of
-msgid "extra parameter in JWK"
-msgstr "JWK 中的额外参数"
-
-#: joserfc._rfc7518.ec_key.ECKey.generate_key:5
-#: joserfc._rfc7518.rsa_key.RSAKey.generate_key:5
-#: joserfc._rfc8037.okp_key.OKPKey.generate_key:5 of
-msgid "generate a private key or public key"
-msgstr "生成私钥或公钥"
-
-#: joserfc._rfc7518.ec_key.ECKey.generate_key:6
-#: joserfc._rfc7518.oct_key.OctKey.generate_key:6
-#: joserfc._rfc7518.rsa_key.RSAKey.generate_key:6
-#: joserfc._rfc8037.okp_key.OKPKey.generate_key:6 of
-msgid "add ``kid`` automatically"
-msgstr "自动添加 ``kid``"
-
 #: joserfc.jwk.ECKey.kid:1 joserfc.jwk.OKPKey.kid:1 joserfc.jwk.OctKey.kid:1
 #: joserfc.jwk.RSAKey.kid:1 of
 msgid "The \"kid\" value of the JSON Web Key."
@@ -653,7 +674,7 @@ msgstr ""
 msgid "Call this method will generate the thumbprint URI defined in RFC9278."
 msgstr ""
 
-#: ../../docstring joserfc.jwk.ECKey.value_registry:1 of
+#: joserfc.jwk.ECKey.value_registry:1 of
 msgid ""
 "Registry definition for EC Key https://www.rfc-"
 "editor.org/rfc/rfc7518#section-6.2"
@@ -751,15 +772,34 @@ msgstr ""
 msgid "Key class of the ``OKP`` key type."
 msgstr "``OKP`` 密钥类型的密钥类。"
 
-#: joserfc._rfc8037.okp_key.OKPKey.generate_key:1 of
-msgid "Generate a ``OKPKey`` with the given \"crv\" value."
-msgstr "生成具有给定 \"crv\" 值的 ``OKPKey``。"
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:1 of
+msgid ""
+"Derives a key from a given input secret using a specified key derivation "
+"function (KDF) and elliptic curve algorithm."
+msgstr ""
 
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:4 of
+msgid ""
+"To derive a key using **HKDF**, the ``kdf_options`` may contain the "
+"``algorithm``, ``salt`` and ``info`` values:"
+msgstr ""
+
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:25 of
+msgid ""
+"To derive a key using **PBKDF2**, the ``kdf_options`` may contain the "
+"``algorithm``, ``salt`` and ``iterations`` values:"
+msgstr ""
+
+#: joserfc._rfc8037.okp_key.OKPKey.derive_key:46
 #: joserfc._rfc8037.okp_key.OKPKey.generate_key:3 of
 msgid "OKPKey curve name"
 msgstr "OKPKey 曲线名称"
 
-#: ../../docstring joserfc.jwk.OKPKey.value_registry:1 of
+#: joserfc._rfc8037.okp_key.OKPKey.generate_key:1 of
+msgid "Generate a ``OKPKey`` with the given \"crv\" value."
+msgstr "生成具有给定 \"crv\" 值的 ``OKPKey``。"
+
+#: joserfc.jwk.OKPKey.value_registry:1 of
 msgid ""
 "Registry definition for OKP Key https://www.rfc-"
 "editor.org/rfc/rfc8037#section-2"
@@ -798,7 +838,7 @@ msgstr ""
 msgid "The raw key in bytes."
 msgstr "原始密钥，字节形式。"
 
-#: ../../docstring joserfc.jwk.OctKey.value_registry:1 of
+#: joserfc.jwk.OctKey.value_registry:1 of
 msgid "https://www.rfc-editor.org/rfc/rfc7518#section-6.4"
 msgstr "https://www.rfc-editor.org/rfc/rfc7518#section-6.4"
 
@@ -806,7 +846,7 @@ msgstr "https://www.rfc-editor.org/rfc/rfc7518#section-6.4"
 msgid "Generate a ``RSAKey`` with the given bit size (not bytes)."
 msgstr "生成具有给定位大小（不是字节）的 ``RSAKey``。"
 
-#: ../../docstring joserfc.jwk.RSAKey.value_registry:1 of
+#: joserfc.jwk.RSAKey.value_registry:1 of
 msgid ""
 "Registry definition for RSA Key https://www.rfc-"
 "editor.org/rfc/rfc7518#section-6.3"
@@ -873,13 +913,13 @@ msgstr "用于紧凑模式的 JSON Web Signature 对象。此对象用于表示 
 msgid "Returns protected header values in dict."
 msgstr "返回字典形式的受保护的 header 值。"
 
-#: ../../docstring joserfc.jws.CompactSignature.payload:1
+#: joserfc.jws.CompactSignature.payload:1
 #: joserfc.jws.FlattenedJSONSignature.payload:1
 #: joserfc.jws.GeneralJSONSignature.payload:1 of
 msgid "payload content in bytes"
 msgstr "字节形式的载荷内容"
 
-#: ../../docstring joserfc.jws.CompactSignature.protected:1
+#: joserfc.jws.CompactSignature.protected:1
 #: joserfc.jws.HeaderMember.protected:1 of
 msgid "protected header"
 msgstr "受保护的 header"
@@ -888,7 +928,7 @@ msgstr "受保护的 header"
 msgid "JSON Signature object that represents a flattened JSON serialization."
 msgstr "表示扁平 JSON 序列化的 JSON Signature 对象。"
 
-#: ../../docstring joserfc.jws.FlattenedJSONSignature.flattened:1 of
+#: joserfc.jws.FlattenedJSONSignature.flattened:1 of
 msgid "mark it as flattened"
 msgstr "标记为扁平"
 
@@ -896,7 +936,7 @@ msgstr "标记为扁平"
 msgid "Header values in dict."
 msgstr "字典形式的 header 值。"
 
-#: ../../docstring joserfc.jws.FlattenedJSONSignature.member:1 of
+#: joserfc.jws.FlattenedJSONSignature.member:1 of
 msgid "the only header member"
 msgstr "唯一的 header 成员"
 
@@ -910,11 +950,11 @@ msgstr ""
 msgid "JSON Signature object that represents a general JSON serialization."
 msgstr "表示通用 JSON 序列化的 JSON Signature 对象。"
 
-#: ../../docstring joserfc.jws.GeneralJSONSignature.flattened:1 of
+#: joserfc.jws.GeneralJSONSignature.flattened:1 of
 msgid "mark it as not flattened (general)"
 msgstr "标记为非扁平（通用）"
 
-#: ../../docstring joserfc.jws.GeneralJSONSignature.members:1 of
+#: joserfc.jws.GeneralJSONSignature.members:1 of
 msgid "a list of header members"
 msgstr "header 成员列表"
 
@@ -924,7 +964,7 @@ msgid ""
 "header, and unprotected header."
 msgstr "JSON 签名的 header 成员。它由受保护和未保护的 header 组成。"
 
-#: ../../docstring joserfc.jws.HeaderMember.header:1 of
+#: joserfc.jws.HeaderMember.header:1 of
 msgid "unprotected header"
 msgstr "未保护的 header"
 
@@ -935,11 +975,11 @@ msgid ""
 "``joserfc.jws``."
 msgstr "用于 JSON Web Signature 的注册表，用于保存所有支持的算法。通常与 ``joserfc.jws`` 中的方法一起使用。"
 
-#: ../../docstring joserfc.jws.JWSRegistry.Strategy.RECOMMENDED:1 of
+#: joserfc.jws.JWSRegistry.Strategy.RECOMMENDED:1 of
 msgid "find the recommended algorithm"
 msgstr ""
 
-#: ../../docstring joserfc.jws.JWSRegistry.Strategy.SECURITY:1 of
+#: joserfc.jws.JWSRegistry.Strategy.SECURITY:1 of
 msgid "find the most secure algorithm"
 msgstr ""
 
@@ -975,15 +1015,15 @@ msgstr ""
 msgid "the strategy for guessing the JWS algorithm"
 msgstr ""
 
-#: ../../docstring joserfc.jws.JWSRegistry.max_header_length:1 of
+#: joserfc.jws.JWSRegistry.max_header_length:1 of
 msgid "max header content's size in bytes"
 msgstr "header 内容的最大字节大小"
 
-#: ../../docstring joserfc.jws.JWSRegistry.max_payload_length:1 of
+#: joserfc.jws.JWSRegistry.max_payload_length:1 of
 msgid "max payload content's size in bytes"
 msgstr "payload 内容的最大字节大小"
 
-#: ../../docstring joserfc.jws.JWSRegistry.max_signature_length:1 of
+#: joserfc.jws.JWSRegistry.max_signature_length:1 of
 msgid "max signature's size in bytes"
 msgstr "签名的最大字节大小"
 
@@ -1257,11 +1297,11 @@ msgstr "JWT 的 header 部分"
 msgid "the payload part of the JWT"
 msgstr "JWT 的有效载荷 (payload) 部分"
 
-#: ../../docstring joserfc.jwt.Token.claims:1 of
+#: joserfc.jwt.Token.claims:1 of
 msgid "payload claims in dict"
 msgstr "字典形式的有效载荷 (payload) 声明 (claims)"
 
-#: ../../docstring joserfc.jwt.Token.header:1 of
+#: joserfc.jwt.Token.header:1 of
 msgid "header in dict"
 msgstr "字典形式的 header"
 
@@ -1328,3 +1368,10 @@ msgstr "要使用的 JSONEncoder 子类"
 #: joserfc.jwt.encode:9 of
 msgid "default value of the ``typ`` header parameter"
 msgstr ""
+
+#~ msgid ""
+#~ "This error is designed for JWT. It"
+#~ " raised when the token is not "
+#~ "valid yet."
+#~ msgstr "此错误是为 JWT 设计的，当 Token 不是有效的 JSON 对象时触发。"
+
