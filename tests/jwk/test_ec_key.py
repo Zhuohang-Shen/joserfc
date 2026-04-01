@@ -129,3 +129,39 @@ class TestECKey(TestCase):
         key1 = ECKey.derive_key("ec-secret-key", "P-256", kdf_options={"algorithm": hashes.SHA256()})
         key2 = ECKey.derive_key("ec-secret-key", "P-256", kdf_options={"algorithm": hashes.SHA512()})
         self.assertNotEqual(key1, key2)
+
+    def run_verify_full_size(self, curve_name: str, expected_base64_count: int):
+        """
+        Verifies that full base64url bytes is being emitted properly according to
+        https://datatracker.ietf.org/doc/html/rfc7518#section-6.2
+        """
+        private_key = ECKey.generate_key(curve_name)
+        # find the number which requires one less byte(octet) than a full padding
+        lower_cap = pow(2, private_key.curve_key_size - 8)
+
+        # now generate keys until we find a parameter which could be truncated
+        while (
+            private_key.public_key.public_numbers().x >= lower_cap
+            and private_key.public_key.public_numbers().y >= lower_cap
+            and private_key.private_key.private_numbers().private_value >= lower_cap
+        ):
+            private_key = ECKey.generate_key(curve_name)
+
+        output_private = private_key.as_dict(private=True)
+        self.assertEqual(expected_base64_count, len(output_private["x"]))
+        self.assertEqual(expected_base64_count, len(output_private["y"]))
+        self.assertEqual(expected_base64_count, len(output_private["d"]))
+
+        pub_key = ECKey.import_key(private_key.public_key)
+        output_public = pub_key.as_dict(private=False)
+        self.assertEqual(expected_base64_count, len(output_public["x"]))
+        self.assertEqual(expected_base64_count, len(output_public["y"]))
+
+    def test_p256_full_size(self):
+        self.run_verify_full_size("P-256", 43)
+
+    def test_p384_full_size(self):
+        self.run_verify_full_size("P-384", 64)
+
+    def test_p521_full_size(self):
+        self.run_verify_full_size("P-521", 88)
