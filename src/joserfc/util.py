@@ -54,6 +54,8 @@ def int_to_base64(num: int, byte_count: Optional[int] = None) -> str:
 
     if byte_count is None:
         byte_count = (num.bit_length() + 7) // 8
+    elif num.bit_length() > byte_count * 8:
+        raise ValueError("Number too large for byte count")
 
     s = num.to_bytes(byte_count, "big", signed=False)
     return urlsafe_b64encode(s).decode("utf-8", "strict")
