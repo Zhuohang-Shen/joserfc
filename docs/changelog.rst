@@ -12,6 +12,14 @@ Changelog
 .. module:: joserfc
     :noindex:
 
+1.6.4
+-----
+
+**Released on April 13, 2026**
+
+- **JWE**: remove ``InvalidCEKLengthError``.
+- **JWK**: fix ``ECKey`` serialization.
+
 1.6.3
 -----
 
