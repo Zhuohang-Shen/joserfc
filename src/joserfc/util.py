@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Any, Optional
+from typing import Any
 import base64
 import struct
 import binascii
@@ -48,7 +48,7 @@ def base64_to_int(s: str) -> int:
     return int("".join(["%02x" % byte for byte in buf]), 16)
 
 
-def int_to_base64(num: int, byte_count: Optional[int] = None) -> str:
+def int_to_base64(num: int, byte_count: int | None = None) -> str:
     if num < 0:
         raise ValueError("Must be a positive integer")
 
